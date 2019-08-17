@@ -1,0 +1,320 @@
+1566063334603	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\sucke\\AppData\\Local\\Temp\\rust_mozprofile.OmtwXVkajhZR"
+1566063334961	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1566063334961	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1566063334961	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1566063334964	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+WARN: compileToBinary(259): 
+C:\fakepath(334,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(340,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(382,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(287,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(334,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(340,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(382,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(287,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(223,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(260,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Parent 4220, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1548, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1548, Chrome_ChildThread] 1566063337605	Marionette	INFO	Listening on port 52375
+1566063337734	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 4220, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 4220, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14828, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14828, Chrome_Chi[Child 5300, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5300, Chrome_C[Parent 4220, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5116, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5116, Chrome_ChildThread] WARNING1566063399692	Marionette	INFO	Stopped listening on port 52375
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 10716, Chrome_Chi
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+arning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(382,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(287,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(334,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(340,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(382,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(287,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(223,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(260,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+1566063350209	Marionette	INFO	Listening on port 52420
+1566063350301	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 10192, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10192, Chrome_ChildThr[Parent 9100, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11808, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11808, Chrome_ChildThr[Parent 9100, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11068, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11068, Chrome_ChildT1566063407321	Marionette	INFO	Stopped listening on port 52420
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 10872, Chrome_ChildThre
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(382,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(287,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(334,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(340,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(382,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(287,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(223,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(260,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Parent 6712, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10704, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10704, Chrome_ChildThread1566063361976	Marionette	INFO	Listening on port 52464
+1566063362282	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 6712, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14248, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14248, Chrome_Chil[Child 15508, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 15508, Chrome_C[Parent 6712, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11792, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11792, Chrome_ChildThr1566063404784	Marionette	INFO	Stopped listening on port 52464
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 4272, Chrome_ChildThread] 
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+rning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(382,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(287,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(334,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(340,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(382,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(287,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(223,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(260,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Child 11212, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11212, Chrome_ChildThread]1566063374744	Marionette	INFO	Listening on port 52510
+1566063375019	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 17544, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 17544, Chrom[Child 15260, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 15260, Chrome[Parent 6400, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 17856, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 17856, Chrome_ChildTh1566063404453	Marionette	INFO	Stopped listening on port 52510
+[GPU 14
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+352, Chrome_Child
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+(334,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(340,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(382,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(287,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(334,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(340,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(382,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(287,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
+
+WARN: compileToBinary(259): 
+C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
+C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
+C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+C:\fakepath(223,1): warning X4000: use of potentially uninitialized variable (f_distance_aa)
+C:\fakepath(260,1): warning X4000: use of potentially uninitialized variable (f_do_clip)
+
+[Parent 11740, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 17568, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 17568, Chrome_C1566063388051	Marionette	INFO	Listening on port 52557
+1566063388234	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 11740, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6072, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6072, Chrome_ChildThr[Parent 11740, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3304, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3304, Chrome_Chi[Parent 11740, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18744, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1565706750/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18744, Chrome_Ch1566063403339	Marionette	INFO	Stopped listening on port 52557
+[GPU 17488, Chrome_Chi
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1566063420305	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\sucke\\AppData\\Local\\Temp\\rust_mozprofile.ZkpxcEtXT05D"
+*** You are running in headless mode.
+1566063420678	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1566063420678	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1566063420678	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1566063420678	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1566063421999	Marionette	INFO	Listening on port 52608
+1566063422328	Marionette	WARN	TLS certificate errors will be ignored for this session
+1566063431201	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\sucke\\AppData\\Local\\Temp\\rust_mozprofile.7mWKomk3EKeL"
+*** You are running in headless mode.
+1566063431608	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1566063431608	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1566063431608	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1566063431608	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1566063433079	Marionette	INFO	Listening on port 52649
+1566063433226	Marionette	WARN	TLS certificate errors will be ignored for this session
+1566063443186	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\sucke\\AppData\\Local\\Temp\\rust_mozprofile.VUy4ZMlmwctY"
+*** You are running in headless mode.
+1566063443555	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1566063443556	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1566063443556	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1566063443556	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1566063444848	Marionette	INFO	Listening on port 52697
+1566063445210	Marionette	WARN	TLS certificate errors will be ignored for this session
+1566063454920	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\sucke\\AppData\\Local\\Temp\\rust_mozprofile.3RbXRKwiVj21"
+*** You are running in headless mode.
+1566063455291	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1566063455291	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1566063455292	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1566063455292	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1566063456785	Marionette	INFO	Listening on port 52748
+1566063456949	Marionette	WARN	TLS certificate errors will be ignored for this session
+1566063467670	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\sucke\\AppData\\Local\\Temp\\rust_mozprofile.I4gLZenCC3Eh"
+*** You are running in headless mode.
+1566063468044	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1566063468044	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1566063468044	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1566063468044	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1566063469560	Marionette	INFO	Listening on port 52790
+1566063469691	Marionette	WARN	TLS certificate errors will be ignored for this session
+1566064974205	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\sucke\\AppData\\Local\\Temp\\rust_mozprofile.D66wMaMXtg5M"
+*** You are running in headless mode.
+1566064974676	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1566064974676	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1566064974677	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1566064974677	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1566064976304	Marionette	INFO	Listening on port 53600
+1566064976353	Marionette	WARN	TLS certificate errors will be ignored for this session
+1566065003737	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\sucke\\AppData\\Local\\Temp\\rust_mozprofile.GYPZK9iCK4wL"
+*** You are running in headless mode.
+1566065004180	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1566065004180	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1566065004180	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1566065004180	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1566065006011	Marionette	INFO	Listening on port 53671
+1566065006369	Marionette	WARN	TLS certificate errors will be ignored for this session
+1566065016973	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\sucke\\AppData\\Local\\Temp\\rust_mozprofile.U78iI6kQ6P6a"
+*** You are running in headless mode.
+1566065017485	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1566065017485	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1566065017485	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1566065017485	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1566065019376	Marionette	INFO	Listening on port 53722
+1566065019597	Marionette	WARN	TLS certificate errors will be ignored for this session
+1566065029718	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\sucke\\AppData\\Local\\Temp\\rust_mozprofile.SvcntnfqIt74"
+*** You are running in headless mode.
+1566065030206	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1566065030206	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1566065030207	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1566065030207	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1566065031997	Marionette	INFO	Listening on port 53769
+1566065032361	Marionette	WARN	TLS certificate errors will be ignored for this session
+1566065044558	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\sucke\\AppData\\Local\\Temp\\rust_mozprofile.C70hY4Po5fbL"
+*** You are running in headless mode.
+1566065045057	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1566065045057	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1566065045058	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1566065045058	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1566065046816	Marionette	INFO	Listening on port 53821
+1566065047173	Marionette	WARN	TLS certificate errors will be ignored for this session
+1566065072283	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\sucke\\AppData\\Local\\Temp\\rust_mozprofile.MPOC0IynByP2"
+*** You are running in headless mode.
+1566065072791	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1566065072792	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1566065072792	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1566065072792	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1566065074482	Marionette	INFO	Listening on port 53870
+1566065074933	Marionette	WARN	TLS certificate errors will be ignored for this session
+1566065087156	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\sucke\\AppData\\Local\\Temp\\rust_mozprofile.yyiwgM5F39vS"
+*** You are running in headless mode.
+1566065087666	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1566065087666	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1566065087666	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1566065087666	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1566065089655	Marionette	INFO	Listening on port 53932
+1566065089768	Marionette	WARN	TLS certificate errors will be ignored for this session
+1566065100444	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\sucke\\AppData\\Local\\Temp\\rust_mozprofile.BPgazk0bw6EN"
+*** You are running in headless mode.
+1566065100989	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1566065100989	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1566065100989	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1566065100989	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1566065103029	Marionette	INFO	Listening on port 53983
+1566065103058	Marionette	WARN	TLS certificate errors will be ignored for this session
+1566065114567	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\sucke\\AppData\\Local\\Temp\\rust_mozprofile.8JLrpQFNrYMR"
+*** You are running in headless mode.
+1566065115041	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1566065115041	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1566065115041	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1566065115041	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1566065116713	Marionette	INFO	Listening on port 54034
+1566065116722	Marionette	WARN	TLS certificate errors will be ignored for this session
+1566065128608	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\sucke\\AppData\\Local\\Temp\\rust_mozprofile.w4YDcYY0cXyi"
+*** You are running in headless mode.
+1566065129104	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1566065129104	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1566065129105	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1566065129105	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1566065131107	Marionette	INFO	Listening on port 54082
+1566065131222	Marionette	WARN	TLS certificate errors will be ignored for this session
