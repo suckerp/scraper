@@ -127,14 +127,14 @@ for url in urls:
     #Ergebnis wird als csv Datei gespeichert
     #Dateiname ist der jeweilige Eintrag aus dem files-Array
     #Delimiter ist das Semikolon und Zeilenumbrüche werden mir Enter hinterlegt
-    np.savetxt(".\output\\" + files[counter], lines, delimiter=';', fmt='%s', newline='\n')
+    np.savetxt(".\\output\\" + files[counter], lines, delimiter=';', fmt='%s', newline='\n')
 
     #Ausgabe, dass die Datei geschrieben wurde
     print(files[counter] + ' done')
 
     #Browser wird geschlossen
     browser.quit()
-    
+
     #Zähler wird um 1 erhöht, damit beim nächsten Durchlauf wieder der passende Dateiname gewählt wird
     counter = counter + 1
 
