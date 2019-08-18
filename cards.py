@@ -15,16 +15,16 @@ except ImportError:
 #Beide Browser werden im Headless Modus gestartet, also ohne sichtbares Fenster
 
 #Chrome
-#options = webdriver.ChromeOptions()
-#options.add_argument('headless')
+options = webdriver.ChromeOptions()
+options.add_argument('headless')
 
 #Firefox
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-cap = DesiredCapabilities().FIREFOX
-cap["marionette"] = True
-options = Options()
-options.add_argument("--headless")
+#from selenium.webdriver.firefox.options import Options
+#from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+#cap = DesiredCapabilities().FIREFOX
+#cap["marionette"] = True
+#options = Options()
+#options.add_argument("--headless")
 
 #URL zu den verschiedenen Ligen
 urls = [
@@ -50,10 +50,10 @@ counter = 0
 #Durchlaufen des URL Array
 for url in urls:
     #Chrome
-    #browser = webdriver.Chrome('chromedriver', options=options)
+    browser = webdriver.Chrome('chromedriver', options=options)
 
     #Firefox
-    browser = webdriver.Firefox(capabilities=cap, options=options)
+    #browser = webdriver.Firefox(capabilities=cap, options=options)
 
     #Datei öffnen
     browser.get(url)
@@ -96,11 +96,12 @@ for url in urls:
     lines = [l.replace("O %", "O_%") for l in lines]
     lines = [l.replace("U %", "U_%") for l in lines]
     lines = [l.replace("C Palace", "Crystal_Palace") for l in lines]
-    lines = [l.replace("Man Utd", "Man_Utd") for l in lines]
-    lines = [l.replace("Man City", "Man_City") for l in lines]
+    lines = [l.replace("Man Utd", "Manchester_United") for l in lines]
+    lines = [l.replace("Man City", "Manchester_City") for l in lines]
     lines = [l.replace("West Ham", "West_Ham") for l in lines]
     lines = [l.replace("Sheffield United", "Sheffield_United") for l in lines]
     lines = [l.replace("Aston Villa", "Aston_Villa") for l in lines]
+    lines = [l.replace("Cologne", "Köln") for l in lines]
     lines = [l.replace("Fortuna Dusseldorf", "Fortuna_Düsseldorf") for l in lines]
     lines = [l.replace("Union Berlin", "Union_Berlin") for l in lines]
     lines = [l.replace("Bayern Munich", "Bayern_München") for l in lines]
@@ -122,21 +123,23 @@ for url in urls:
     #Unterstriche werden wieder mit Leerzeichen ersetzt
     lines = [l.replace("_", " ") for l in lines]
 
-    #Browser wird geschlossen
-    browser.quit
 
     #Ergebnis wird als csv Datei gespeichert
     #Dateiname ist der jeweilige Eintrag aus dem files-Array
     #Delimiter ist das Semikolon und Zeilenumbrüche werden mir Enter hinterlegt
-    np.savetxt(files[counter], lines, delimiter=';', fmt='%s', newline='\n')
+    np.savetxt(".\output\\" + files[counter], lines, delimiter=';', fmt='%s', newline='\n')
 
     #Ausgabe, dass die Datei geschrieben wurde
     print(files[counter] + ' done')
 
+    #Browser wird geschlossen
+    browser.quit()
+    
     #Zähler wird um 1 erhöht, damit beim nächsten Durchlauf wieder der passende Dateiname gewählt wird
     counter = counter + 1
 
-#Am Ende wird der Browser noch einmal geschlossen
-browser.quit
 #Ausgabe, dass alles erledigt wurde
-print('All DONE!!!') 
+print('All DONE!!!')
+
+#Am Ende wird der Browser noch einmal geschlossen
+#browser.quit()
