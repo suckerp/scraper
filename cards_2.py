@@ -4,13 +4,13 @@ try:
     from selenium import webdriver
 except ImportError:
     print('Versuche Selenium zu installieren')
-    os.system('python -m pip install selenium') 
+    os.system('python -m pip install selenium --user') 
 
 try: 
     import numpy as np
 except ImportError:
     print('Versuche Selenium zu installieren')
-    os.system('python -m pip install numpy') 
+    os.system('python -m pip install numpy --user') 
 
 
 def idx(a_list, value):
@@ -67,8 +67,6 @@ browser = webdriver.Chrome('chromedriver', options=options)
 browser.get("https://en.24score.com/football/england/premier_league/2019-2020/regular_season/fixtures/")
 
 
-
-
 elems = browser.find_elements_by_xpath("//table/tbody//td[contains(@class, 'h2h')]//a[@href]")
 
 games = len(elems)
@@ -88,12 +86,22 @@ for i in range (start, end):
 cards = [[0 for x in range(0)] for y in range(int(((games / 20) + 1) / 2))]
 
 
+"""
+browser.get("https://en.24score.com/football/england/premier_league/2019-2020/regular_season/referees/")
 
-#browser.get("https://en.24score.com/football/england/premier_league/2019-2020/regular_season/referees/")
+container = browser.find_element_by_class_name("data_0_last5")
+browser.execute_script("arguments[0].style.display = 'block';", container)
 
-#refs = browser.find_element_by_class_name("data-tab").text
+refs = browser.find_element_by_class_name("data_0_last5").text
+#input.send_keys(path_to_file)
 
-#refs = refs.splitlines()
+
+#refs = browser.find_element_by_id("data_container").text
+
+refs = refs.splitlines()
+
+print(refs)
+"""
 
 
 counter = 0
@@ -107,13 +115,28 @@ for match in matches:
 
     ou = browser.find_elements_by_class_name("data_h2h_last20")
 
-    ou_lines = ou[1].text.splitlines()
+    try:
+        ou_lines = ou[1].text.splitlines()
+    except:
+        continue
 
-    if idx(ou_lines, "Cards 0.5 1.5 2.5 3.5 4.5 5.5 6.5") < 0:
+    try:
+        index = ou_lines.index("Cards 0.5 1.5 2.5 3.5 4.5 5.5 6.5")
+    except:
         ou_lines = ou[2].text.splitlines()
+    
 
+    #if idx(ou_lines, "Cards 0.5 1.5 2.5 3.5 4.5 5.5 6.5") < 0:
+    #    ou_lines = ou[2].text.splitlines()
+    #if idx(ou_lines, "Cards 0.5 1.5 2.5 3.5 4.5 5.5 6.5") < 0:
+    #    continue
 
-    index = ou_lines.index("Cards 0.5 1.5 2.5 3.5 4.5 5.5 6.5")
+    try:
+        index = ou_lines.index("Cards 0.5 1.5 2.5 3.5 4.5 5.5 6.5")
+    except:
+        continue
+
+    #index = ou_lines.index("Cards 0.5 1.5 2.5 3.5 4.5 5.5 6.5")
 
 
     cards[counter].append(ou_lines[0].replace(' OVER', ''))
@@ -129,10 +152,6 @@ for match in matches:
 
 
 
-
-
-
-
 #Ergebnis wird als csv Datei gespeichert
 #Dateiname ist der jeweilige Eintrag aus dem files-Array
 #Delimiter ist das Semikolon und Zeilenumbrüche werden mir Enter hinterlegt
@@ -141,6 +160,7 @@ np.savetxt(".\\output\\england.csv", cards, delimiter=';', fmt='%s', newline='\n
 
 
 browser.quit()
+
 
 """
 for url in urls:
