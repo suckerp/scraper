@@ -153,14 +153,13 @@ for url in urls:
         #Entfernen von Over / Under bei den Teamnamen
         cards[counter].append(ou_lines[0].replace(' Over', ''))
         cards[counter].append(ou_lines[1].replace('Under ', ''))
+        #Hinzufügen des Vergleichswerts
+        check = ou_lines[index_cards[0]].split(' ')
+        cards[counter].append(check[4].replace('.', ','))
         #Hinzufügen der Informationen für die beiden Teams
         index = index_cards[0] - 2
         cards[counter].append(ou_lines[index_cards[0] - 2] + ' | ' + ou_lines[index_cards[0] - 1])
         cards[counter].append(ou_lines[index_cards[0] + 3] + ' | ' + ou_lines[index_cards[0] + 4])
-
-        check = ou_lines[index_cards[0]].split(' ')
-
-        cards[counter].append(check[4].replace('.', ','))
 
         #Überprüfung. ob ein Ref in den Infos gefunden wurde
         if (index_ref == 0):
@@ -187,10 +186,14 @@ for url in urls:
 
             cards[counter].append(str(ref))
 
-            cards[counter].append(str(home[0]))
+            cards[counter].append(str(home[0]) + ' | ' + str(away[0]))
 
-            cards[counter].append(str(away[0]))
-        
+            #cards[counter].append(str(home[0]))
+            #cards[counter].append(str(away[0]))
+        else:
+            cards[counter].append('No Ref')
+            cards[counter].append('0 | 0')
+
         #print(cards)
         
         counter+= 1
