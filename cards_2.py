@@ -12,6 +12,7 @@ except ImportError:
     print('Versuche Selenium zu installieren')
     os.system('python -m pip install numpy --user') 
 
+import math
 
 def idx(a_list, value):
     try:
@@ -43,6 +44,15 @@ urls = [
     "https://en.24score.com/football/france/ligue_1/2019-2020/1st_round/fixtures/"
 ]
 
+ref_urls = [
+    "https://en.24score.com/football/england/premier_league/2019-2020/regular_season/referees/", 
+    "https://en.24score.com/football/germany/1_bundesliga/2019-2020/regular_season/referees/",
+    "https://en.24score.com/football/spain/primera_division/2019-2020/regular_season/referees/",
+    "https://en.24score.com/football/italy/serie_a/2019-2020/regular_season/referees/",
+    "https://en.24score.com/football/france/ligue_1/2019-2020/1st_round/referees/"
+]
+
+
 #Dateinamen für die Ausgabe der .csv Dateien
 files = [
     "england.csv",
@@ -53,112 +63,148 @@ files = [
 ]
 
 #Zähler für den richtigen dateinamen
-counter = 0
+ref_counter = 0
 
 #Durchlaufen des URL Array
+for url in urls:
+    #Chrome
+    browser = webdriver.Chrome('chromedriver', options=options)
 
-#Chrome
-browser = webdriver.Chrome('chromedriver', options=options)
+    #Firefox
+    #browser = webdriver.Firefox(capabilities=cap, options=options)
 
-#Firefox
-#browser = webdriver.Firefox(capabilities=cap, options=options)
+    #Refs der jeweiligen Liga auslesen
+    browser.get(ref_urls[ref_counter])
 
-#Datei öffnen
-browser.get("https://en.24score.com/football/england/premier_league/2019-2020/regular_season/fixtures/")
+    container = browser.find_element_by_class_name("data_0_last5")
+    browser.execute_script("arguments[0].style.display = 'block';", container)
 
+    refs = browser.find_element_by_class_name("data_0_last5").text
 
-elems = browser.find_elements_by_xpath("//table/tbody//td[contains(@class, 'h2h')]//a[@href]")
+    refs = refs.splitlines()
 
-games = len(elems)
+    browser.quit()
 
-matchday = input("Spieltag?")
+    #Auslesen der Liga
+    browser = webdriver.Chrome('chromedriver', options=options)
 
-matches = []
+    browser.get(url)
 
-start = games - (int(matchday)*10)
-end = games - (int(matchday)*10 - 10)
+    elems = browser.find_elements_by_xpath("//table/tbody//td[contains(@class, 'h2h')]//a[@href]")
 
+    #Anzahl aller Spiele der Liga auslesen
+    games = len(elems)
+    matches_day = int((0.5 + math.sqrt(games + 0.5)) / 2)
 
-for i in range (start, end):
-    matches.append(elems[i].get_attribute("href"))
+    #Abfrage des aktuellen Spieltags
+    matchday = input("Spieltag?")
+    #Leeres Array für die Spiele des Spieltags
+    matches = []
+    #Ausrechnen welche Spiele zum Spieltag gehören
+    start = games - (int(matchday)* matches_day)
+    end = games - (int(matchday)* matches_day - matches_day)
 
+    #Auslesen der URLs für die ausgerechnete Spiele
+    for i in range (int(start), int(end)):
+        matches.append(elems[i].get_attribute("href"))
 
-cards = [[0 for x in range(0)] for y in range(int(((games / 20) + 1) / 2))]
+    #2D Array für die Karten wird erstellt
+    #Das innere ist leer, das äußere wird durch die Anzahl der Spiele pro Spieltag bestimmt
+    #Die berechnet sich aus der Hälfte der Teams
+    cards = [[0 for x in range(0)] for y in range(int(((games / matches_day / 2) + 1) / 2))]
 
+    #Zähler für das jeweilige Spiel
+    counter = 0
+    #Leeres Array für die Refs, die einem Spiel zugewiesen wurden
+    refs_match = []
+    #Der Index wird auf -1 gesetzt
+    index_ref = -1
 
-"""
-browser.get("https://en.24score.com/football/england/premier_league/2019-2020/regular_season/referees/")
+    #Schleife über alle Spiele des jeweiligen Spieltags einer Liga
+    for match in matches:
+        #Aufrufen der Seite zum Spiel
+        browser.get(match)
+        #Zuerst wird die Spieltagnummer eingetragen
+        cards[counter].append(matchday)
+        #Auslesen der Informationen zum Spiel
+        ou = browser.find_elements_by_class_name("data_h2h_last20")
 
-container = browser.find_element_by_class_name("data_0_last5")
-browser.execute_script("arguments[0].style.display = 'block';", container)
-
-refs = browser.find_element_by_class_name("data_0_last5").text
-#input.send_keys(path_to_file)
-
-
-#refs = browser.find_element_by_id("data_container").text
-
-refs = refs.splitlines()
-
-print(refs)
-"""
-
-
-counter = 0
-
-
-for match in matches:
-
-    browser.get(match)
-
-    cards[counter].append(matchday)
-
-    ou = browser.find_elements_by_class_name("data_h2h_last20")
-
-    try:
-        ou_lines = ou[1].text.splitlines()
-    except:
-        continue
-
-    try:
-        index = ou_lines.index("Cards 0.5 1.5 2.5 3.5 4.5 5.5 6.5")
-    except:
-        ou_lines = ou[2].text.splitlines()
-    
-
-    #if idx(ou_lines, "Cards 0.5 1.5 2.5 3.5 4.5 5.5 6.5") < 0:
-    #    ou_lines = ou[2].text.splitlines()
-    #if idx(ou_lines, "Cards 0.5 1.5 2.5 3.5 4.5 5.5 6.5") < 0:
-    #    continue
-
-    try:
-        index = ou_lines.index("Cards 0.5 1.5 2.5 3.5 4.5 5.5 6.5")
-    except:
-        continue
-
-    #index = ou_lines.index("Cards 0.5 1.5 2.5 3.5 4.5 5.5 6.5")
-
-
-    cards[counter].append(ou_lines[0].replace(' OVER', ''))
-    cards[counter].append(ou_lines[1].replace('UNDER ', ''))
+        #Auslesen der Daten
+        #Zur Sicherheit wird mit try gearbeitet, falls nichts gefunden wird
+        try:
+            ref_lines = ou[1].text.splitlines()
+        except:
+            continue
         
-    cards[counter].append('\'' + ou_lines[index - 2] + ' - ' + ou_lines[index - 1])
-    cards[counter].append('\'' + ou_lines[index + 3] + ' - ' + ou_lines[index + 4])
+        #Prüfen, ob bereits ein Ref zugewiesen wurde
+        try:
+            index_ref = ref_lines.index("Referee Played Yellow cards Red cards")
+            #Falls ja, dann wird aus dem nächsten Element der Liste die Karten-Info ausgelesen
+            ou_lines = ou[2].text.splitlines()
+            #ou_number = ou_lines.
+            index_cards = [ou_lines.index(i) for i in ou_lines if 'Cards' in i]
 
-    print(cards)
-    
+        except:
+            #Falls nein, dann wird nur die Karten Info ausgelesen
+            ou_lines = ou[1].text.splitlines()
+            index_cards = [ou_lines.index(i) for i in ou_lines if 'Cards' in i]
+        
+        #Hinzufügen von Heim- u. Auswärtsteam
+        #Entfernen von Over / Under bei den Teamnamen
+        cards[counter].append(ou_lines[0].replace(' Over', ''))
+        cards[counter].append(ou_lines[1].replace('Under ', ''))
+        #Hinzufügen der Informationen für die beiden Teams
+        index = index_cards[0] - 2
+        cards[counter].append(ou_lines[index_cards[0] - 2] + ' | ' + ou_lines[index_cards[0] - 1])
+        cards[counter].append(ou_lines[index_cards[0] + 3] + ' | ' + ou_lines[index_cards[0] + 4])
 
-    counter+= 1
+        check = ou_lines[index_cards[0]].split(' ')
 
+        cards[counter].append(check[4].replace('.', ','))
 
+        #Überprüfung. ob ein Ref in den Infos gefunden wurde
+        if (index_ref == 0):
+            #Aufteilen der Infos am Leerzeichen
+            refs_match = ref_lines[2].split(' ')
 
-#Ergebnis wird als csv Datei gespeichert
-#Dateiname ist der jeweilige Eintrag aus dem files-Array
-#Delimiter ist das Semikolon und Zeilenumbrüche werden mir Enter hinterlegt
-#np.savetxt(".\\output\\" + files[counter], lines, delimiter=';', fmt='%s', newline='\n')
-np.savetxt(".\\output\\england.csv", cards, delimiter=';', fmt='%s', newline='\n')
+            ref_name = []
 
+            for i in range(len(refs_match)-6, -1, -1):
+                ref_name.append(refs_match[i])
+                
+            ref = ref_name[len(ref_name)-1]  
+            
+            for i in range(len(ref_name)-2, -1, -1):
+                ref += ' ' + ref_name[i]
 
+            ref_stats = [s for s in refs if ref in s]
+
+            ref_stats = ref_stats[0].split(' ')
+
+            home = ref_stats[len(ref_stats)-5].split('(')
+
+            away = ref_stats[len(ref_stats)-4].split('(')
+
+            cards[counter].append(str(ref))
+
+            cards[counter].append(str(home[0]))
+
+            cards[counter].append(str(away[0]))
+        
+        #print(cards)
+        
+        counter+= 1
+
+    #Ergebnis wird als csv Datei gespeichert
+    #Dateiname ist der jeweilige Eintrag aus dem files-Array
+    #Delimiter ist das Semikolon und Zeilenumbrüche werden mir Enter hinterlegt
+    results = [nested for nested in cards if nested]
+
+    np.savetxt(".\\output\\" + files[ref_counter], results, delimiter=';', fmt='%s', newline='\n')
+
+    ref_counter += 1
+
+#Schliessen dees Browsers
 browser.quit()
 
 
