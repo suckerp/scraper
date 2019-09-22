@@ -26,6 +26,8 @@ def idx(a_list, value):
 #Chrome
 options = webdriver.ChromeOptions()
 options.add_argument('headless')
+options.add_argument('--disable-gpu')
+options.add_argument('--disable-logging')
 
 #Firefox
 #from selenium.webdriver.firefox.options import Options
@@ -40,33 +42,30 @@ urls = [
     "https://en.24score.com/football/england/premier_league/2019-2020/regular_season/fixtures/",
     "https://en.24score.com/football/germany/1_bundesliga/2019-2020/regular_season/fixtures/",
     "https://en.24score.com/football/spain/primera_division/2019-2020/regular_season/fixtures/",
-    "https://en.24score.com/football/italy/serie_a/2019-2020/regular_season/fixtures/", 
-    "https://en.24score.com/football/france/ligue_1/2019-2020/1st_round/fixtures/"
+    "https://en.24score.com/football/italy/serie_a/2019-2020/regular_season/fixtures/"
 ]
 
 ref_urls = [
     "https://en.24score.com/football/england/premier_league/2019-2020/regular_season/referees/", 
     "https://en.24score.com/football/germany/1_bundesliga/2019-2020/regular_season/referees/",
     "https://en.24score.com/football/spain/primera_division/2019-2020/regular_season/referees/",
-    "https://en.24score.com/football/italy/serie_a/2019-2020/regular_season/referees/",
-    "https://en.24score.com/football/france/ligue_1/2019-2020/1st_round/referees/"
+    "https://en.24score.com/football/italy/serie_a/2019-2020/regular_season/referees/"
 ]
 
 
 #Dateinamen für die Ausgabe der .csv Dateien
-files = [
-    "england.csv",
-    "deutschland.csv",
-    "spanien.csv",
-    "italien.csv",
-    "frankreich.csv"
+countries = [
+    "England",
+    "Deutschland",
+    "Spanien",
+    "Italien"
 ]
 
 #Zähler für den richtigen dateinamen
 ref_counter = 0
 
 #Durchlaufen des URL Array
-for url in urls:
+for idx, url in enumerate(urls):
     #Chrome
     browser = webdriver.Chrome('chromedriver', options=options)
 
@@ -79,9 +78,9 @@ for url in urls:
     container = browser.find_element_by_class_name("data_0_last5")
     browser.execute_script("arguments[0].style.display = 'block';", container)
 
-    refs = browser.find_element_by_class_name("data_0_last5").text
+    refs = browser.find_element_by_class_name("data_0_last5").text.splitlines()
 
-    refs = refs.splitlines()
+    #refs = refs
 
     browser.quit()
 
@@ -97,12 +96,12 @@ for url in urls:
     matches_day = int((0.5 + math.sqrt(games + 0.5)) / 2)
 
     #Abfrage des aktuellen Spieltags
-    matchday = input("Spieltag?")
+    matchday = input("Spieltag " + countries[idx] + "? ")
     #Leeres Array für die Spiele des Spieltags
     matches = []
     #Ausrechnen welche Spiele zum Spieltag gehören
-    start = games - (int(matchday)* matches_day)
-    end = games - (int(matchday)* matches_day - matches_day)
+    start = games - (int(matchday) * matches_day)
+    end = games - (int(matchday) * matches_day - matches_day)
 
     #Auslesen der URLs für die ausgerechnete Spiele
     for i in range (int(start), int(end)):
@@ -124,6 +123,7 @@ for url in urls:
     for match in matches:
         #Aufrufen der Seite zum Spiel
         browser.get(match)
+
         #Zuerst wird die Spieltagnummer eingetragen
         cards[counter].append(matchday)
         #Auslesen der Informationen zum Spiel
@@ -143,7 +143,6 @@ for url in urls:
             ou_lines = ou[2].text.splitlines()
             #ou_number = ou_lines.
             index_cards = [ou_lines.index(i) for i in ou_lines if 'Cards' in i]
-
         except:
             #Falls nein, dann wird nur die Karten Info ausgelesen
             ou_lines = ou[1].text.splitlines()
@@ -153,11 +152,37 @@ for url in urls:
         #Entfernen von Over / Under bei den Teamnamen
         cards[counter].append(ou_lines[0].replace(' Over', ''))
         cards[counter].append(ou_lines[1].replace('Under ', ''))
+
+        """
+        for j in range(2,7):
+            container = browser.find_elements_by_class_name("total_rep8_" + str(j) + "5")
+
+            for x in range(0, len(container)):
+                browser.execute_script("arguments[0].style.display = 'block';", container[x])
+
+
+            ou = browser.find_elements_by_class_name("data_h2h_last20")
+
+            try:
+                #Falls ja, dann wird aus dem nächsten Element der Liste die Karten-Info ausgelesen
+                ou_lines = ou[2].text.splitlines()
+                #ou_number = ou_lines.
+                index_cards = [ou_lines.index(i) for i in ou_lines if 'Cards' in i]
+            except:
+                #Falls nein, dann wird nur die Karten Info ausgelesen
+                ou_lines = ou[1].text.splitlines()
+                index_cards = [ou_lines.index(i) for i in ou_lines if 'Cards' in i]
+
+                
+            print(index_cards)
+            print(ou_lines)
+        """
+
         #Hinzufügen des Vergleichswerts
         check = ou_lines[index_cards[0]].split(' ')
         cards[counter].append(check[4].replace('.', ','))
         #Hinzufügen der Informationen für die beiden Teams
-        index = index_cards[0] - 2
+        #index = index_cards[0] - 2
         cards[counter].append(ou_lines[index_cards[0] - 2] + ' | ' + ou_lines[index_cards[0] - 1])
         cards[counter].append(ou_lines[index_cards[0] + 3] + ' | ' + ou_lines[index_cards[0] + 4])
 
@@ -199,11 +224,11 @@ for url in urls:
         counter+= 1
 
     #Ergebnis wird als csv Datei gespeichert
-    #Dateiname ist der jeweilige Eintrag aus dem files-Array
+    #Dateiname ist der jeweilige Eintrag aus dem countries-Array
     #Delimiter ist das Semikolon und Zeilenumbrüche werden mir Enter hinterlegt
     results = [nested for nested in cards if nested]
 
-    np.savetxt(".\\output\\" + files[ref_counter], results, delimiter=';', fmt='%s', newline='\n')
+    np.savetxt(".\\output\\" + countries[ref_counter] + ".csv", results, delimiter=';', fmt='%s', newline='\n')
 
     ref_counter += 1
 
